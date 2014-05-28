@@ -2,7 +2,13 @@
 
 namespace FaultyMiddleware.Client
 {
-    public class PoorMansCacheProvider
+    public interface ICacheProvider
+    {
+        bool TryGet(object key, out object value);
+        void Set(object key, object value);
+    }
+
+    public class PoorMansCacheProvider : ICacheProvider
     {
         private readonly Hashtable _hash;
 

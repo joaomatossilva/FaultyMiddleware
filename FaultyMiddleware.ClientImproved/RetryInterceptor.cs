@@ -32,8 +32,6 @@ namespace FaultyMiddleware.Client
                     }
                 }
             } while (true); 
-            
-            
         }
     }
 }

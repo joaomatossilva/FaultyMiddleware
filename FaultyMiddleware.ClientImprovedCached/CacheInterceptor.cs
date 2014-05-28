@@ -5,9 +5,9 @@ namespace FaultyMiddleware.Client
 {
     public class CacheInterceptor : IInterceptor
     {
-        private readonly PoorMansCacheProvider _cacheProvider;
+        private readonly ICacheProvider _cacheProvider;
 
-        public CacheInterceptor(PoorMansCacheProvider cacheProvider)
+        public CacheInterceptor(ICacheProvider cacheProvider)
         {
             _cacheProvider = cacheProvider;
         }

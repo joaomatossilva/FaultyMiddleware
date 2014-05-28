@@ -8,7 +8,7 @@ namespace FaultyMiddleware.Client
         public override void Load()
         {
             Kernel.Bind<StatsCounter>().ToConstant(new StatsCounter());
-            Kernel.Bind<PoorMansCacheProvider>().ToConstant(new PoorMansCacheProvider());
+            Kernel.Bind<ICacheProvider>().ToConstant(new PoorMansCacheProvider());
             var binding = Kernel.Bind<INaiveClient>().To<NaiveClient>();
             binding.Intercept().With<CacheInterceptor>().InOrder(1);
             binding.Intercept().With<RetryInterceptor>().InOrder(2);
