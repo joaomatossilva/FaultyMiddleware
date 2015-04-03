@@ -53,14 +53,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\FaultyMiddleware.ClientImproved\NaiveClient.cs">
+      <Link>NaiveClient.cs</Link>
+    </Compile>
     <Compile Include="..\FaultyMiddleware.ClientImproved\Program.cs">
       <Link>Program.cs</Link>
     </Compile>
     <Compile Include="..\FaultyMiddleware.ClientImproved\RetryInterceptor.cs">
       <Link>RetryInterceptor.cs</Link>
-    </Compile>
-    <Compile Include="..\FaultyMiddleware.Client\NaiveClient.cs">
-      <Link>NaiveClient.cs</Link>
     </Compile>
     <Compile Include="..\FaultyMiddleware.Client\StatsCounter.cs">
       <Link>StatsCounter.cs</Link>

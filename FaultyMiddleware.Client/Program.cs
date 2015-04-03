@@ -15,7 +15,7 @@ namespace FaultyMiddleware.Client
             {
                 try
                 {
-                    client.GetMyDate(DateTime.Today.AddDays(i%30));
+                    client.GetMyDate(DateTime.Today.AddDays(i % 30));
                     counter.TotalSuccess++;
                 }
                 catch (Exception ex)

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace FaultyMiddleware.FaultyService
 {
@@ -8,6 +9,7 @@ namespace FaultyMiddleware.FaultyService
 
         public string GetMyDate(DateTime dateTime)
         {
+            Thread.Sleep(50);
             if (Rand.NextDouble() <= .3)
             {
                 throw new Exception("Fault!");

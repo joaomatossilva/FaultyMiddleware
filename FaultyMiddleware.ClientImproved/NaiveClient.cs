@@ -3,7 +3,12 @@ using FaultyMiddleware.FaultyService;
 
 namespace FaultyMiddleware.Client
 {
-    public class NaiveClient
+    public interface INaiveClient
+    {
+        string GetMyDate(DateTime date);
+    }
+
+    public class NaiveClient : INaiveClient
     {
         private StatsCounter _counter;
 
