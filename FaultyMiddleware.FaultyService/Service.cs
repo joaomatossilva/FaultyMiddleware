@@ -9,7 +9,9 @@ namespace FaultyMiddleware.FaultyService
 
         public string GetMyDate(DateTime dateTime)
         {
-            Thread.Sleep(50);
+            //Some work
+            Thread.Sleep(2);
+            
             if (Rand.NextDouble() <= .3)
             {
                 throw new Exception("Fault!");
